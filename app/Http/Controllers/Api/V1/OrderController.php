@@ -415,7 +415,7 @@ class OrderController extends Controller
             try{
                 if($order->order_status == 'pending')
                 {
-                    Mail::to($customer['email'])->send(new \App\Mail\OrderPlaced($order->id));
+                   // Mail::to($customer['email'])->send(new \App\Mail\OrderPlaced($order->id));
                 }
             }catch (\Exception $ex) {
                 info($ex);
